@@ -5,13 +5,17 @@
   "extends": [
     "spectral:oas"
   ],
+  "aliases": {},
   "rules": {
     "info-matches-stoplight": {
       "description": "This is an example rule",
       "message": "Info must contain Stoplight",
-      "given": "$.info",
+      "given": [
+        "$.info"
+      ],
       "recommended": true,
       "type": "style",
+      "severity": "error",
       "then": {
         "field": "title",
         "function": "pattern",
@@ -20,6 +24,17 @@
         }
       }
     },
-    "operation-tags": "off"
+    "operation-tags": {
+      "description": "",
+      "message": "",
+      "given": [],
+      "recommended": false,
+      "type": "",
+      "severity": "off",
+      "then": {
+        "field": "",
+        "function": ""
+      }
+    }
   }
 }
